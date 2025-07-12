@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  background-color: #f5eede;
+  color: #854836;
+  font-family: "Comic Relief", sans-serif;
+  font-size: 16px;
+  background-size: 100%;
+}
+
+#container3D {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+header {
+  padding: 1em 2em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  z-index: 100;
+  background-color: rgba(255, 214, 107, 0.5);
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(1200px, 90vw);
+  margin: auto;
+  min-height: 100vh;
+  position: relative;
+  padding-block: 10em;
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: unset !important;
+  padding-block: unset !important;
+}
+
+#banner .title {
+  color: #854836;
+  width: 50%;
+  font-size: 3em;
+  font-weight: 600;
+  position: relative;
+  text-align: center;
+  font-family: "Comic Relief", sans-serif;
+}
+
+#intro .container {
+  display: flex;
+  gap: 30%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section .number {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.section .container .title {
+  font-size: 5em;
+  font-weight: bold;
+  color: #b6dd5b;
+}
+
+#description .container {
+  padding-right: 30%;
+}
+#description .number {
+  font-size: 5em;
+}
+#description .title {
+  font-size: 5em;
+  font-weight: 600;
+}
+
+#playground .container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  text-align: start;
+}
+#playground .title {
+  font-size: 3em;
+}
+
+#playground .animation-buttons {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 1em;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.animation-buttons button {
+  background-color: #f8f8f8;
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-buttons button:hover {
+  background-color: #ffe5b4;
+  transform: scale(1.1);
+  border-color: #fcbf49;
+}
+
+footer {
+  background-color: #ffd66b;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #854836;
+  border-top: 3px solid #b8d576;
+  font-weight: 500;
+  position: relative;
+  z-index: 101;
+}
+
+footer .container {
+  min-height: unset !important;
+  padding-block: unset !important;
+}
+
+@media screen and (max-width: 1023px) {
+  #banner .title {
+    font-size: 5em;
+    width: 80%;
+  }
+  #intro .container {
+    flex-direction: column;
+  }
+  .section .decorate {
+    width: 40vw !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #banner .title {
+    font-size: 3em;
+    width: 90%;
+  }
+  #intro .container {
+    flex-direction: column;
+  }
+  .section .number {
+    font-size: 3em;
+  }
+  .section .container .title {
+    font-size: 2em;
+  }
+  #description .container {
+    padding-right: 0;
+  }
+  .animation-buttons button {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  .section .decorate {
+    width: 50vw !important;
+  }
+
+  #playground .title {
+    font-size: 2.5em;
+  }
+}
